@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SwiftBasket</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="sb.webp" alt="SwiftBasket Logo" class="logo" id="mainLogo" />
+      <h1>SwiftBasket</h1>
+    </div>
+      <div class="language-container">
+    <select id="languageSelect">
+      <option value="en">English</option>
+      <option value="hi">हिन्दी</option>
+      <option value="ta">தமிழ்</option>
+      <option value="bn">বাংলা</option>
+      <option value="mr">मराठी</option>
+    </select>
+  </div>
+
+
+    <input type="text" class="search-input" id="searchInput" placeholder="Search products..." />
+    <button id="sortBtn">Sort</button>
+    <button id="cartIcon">🛒 Cart (<span id="cartCount">0</span>)</button>
+    
+
+    <div class="login-container">
+      <button id="loginBtn">Login</button>
+    </div>
+  </header>
+
+  <select class="sort-select" id="sortSelect" style="display:none;">
+    <option value="default">Sort By: Default</option>
+    <option value="low-high">Price: Low to High</option>
+    <option value="high-low">Price: High to Low</option>
+    <option value="alphabetical">A-Z</option>
+  </select>
+
+  <main id="productGrid" class="grid"></main>
+
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <span class="close-cart" id="closeCart">&times;</span>
+      <h2>Your Cart</h2>
+      <ul id="cartItems"></ul>
+      <p id="totalPrice"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 SwiftBasket. All rights reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

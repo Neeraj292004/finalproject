@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sub Products</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+  <header class="sub-header">
+    <div class="logo-container">
+      <img src="sb.webp" alt="SwiftBasket Logo" class="logo" id="mainLogo" />
+      <h1>SwiftBasket</h1>
+    </div>
+      <div class="language-container">
+    <select id="languageSelect">
+      <option value="en">English</option>
+      <option value="hi">हिन्दी</option>
+      <option value="ta">தமிழ்</option>
+      <option value="bn">বাংলা</option>
+      <option value="mr">मराठी</option>
+    </select>
+  </div>
+    <button id="viewSubCartBtn" class="view-cart-btn">🛒 View Cart</button>
+    <input type="text" id="subSearch" placeholder="Search sub-products..." />
+    
+  </header>
+
+  <main id="subProductGrid" class="grid"></main>
+
+  <div id="buyModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close-buy">&times;</span>
+      <h2>Confirm Purchase</h2>
+      <p id="buyDetails"></p>
+      <button id="confirmBuy">Confirm</button>
+    </div>
+  </div>
+  <div id="subCartModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close-sub-cart">&times;</span>
+      <h2>Your Sub-Product Cart</h2>
+      <ul id="subCartItems"></ul>
+      <p id="subTotalPrice"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 SwiftBasket. All rights reserved.</p>
+  </footer>
+
+  <script src="category.js"></script>
+</body>
+</html>
